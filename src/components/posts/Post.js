@@ -15,10 +15,11 @@ const Post = ({post, getPosts}) => {
         await getPosts();
     }
     return (
-        <div>
+        <li>
             <p>{post.title}</p>
+            <p>{post.body}</p>
             <button onClick={deletePost}>Delete</button>
-        </div>
+        </li>
     )
 }
 
