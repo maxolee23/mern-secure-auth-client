@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import Post from './Post';
 
-const PostList = ({posts}) => {
+const PostList = ({posts, getPosts}) => {
+
     return (
         <div>
             <ul>
                 {
-                    posts && posts.map((post, id) => (
-                    <li key={id}>{post.title}</li>
+                    posts && posts.map((post, key) => (
+                    <Post post={post} getPosts={getPosts}/>
                     ))
                 }
             </ul>  

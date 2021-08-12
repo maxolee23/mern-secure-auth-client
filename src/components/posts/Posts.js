@@ -18,7 +18,7 @@ const Posts = () => {
     return (
         <>
         <NewPost getPosts={getPosts}/>
-        <PostList posts={posts}/>
+        <PostList posts={posts} getPosts={getPosts}/>
         </>
     )
 }
