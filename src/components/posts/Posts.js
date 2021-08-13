@@ -16,10 +16,10 @@ const Posts = () => {
         getPosts();
     }, []);
     return (
-        <>
+        <div className="flex justify-between">
         <NewPost getPosts={getPosts}/>
         <PostList posts={posts} getPosts={getPosts}/>
-        </>
+        </div>
     )
 }
 

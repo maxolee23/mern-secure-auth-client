@@ -15,10 +15,15 @@ const Post = ({post, getPosts}) => {
         await getPosts();
     }
     return (
-        <li>
-            <p>{post.title}</p>
-            <p>{post.body}</p>
-            <button onClick={deletePost}>Delete</button>
+        <li className="border-2 rounded border-solid border-grey-600 mt-3">
+            <h4 className="text-center text-md leading-6 font-semibold text-gray-700">{post.title}</h4>
+            <p className="text-center text-sm leading-6 font-light text-black-700 px-5">{post.body}</p>       
+            <button
+            className="inline-flex items-center my-5 px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-black-100 bg-red-600 hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            onClick={deletePost}
+            >
+            Delete Post
+            </button>
         </li>
     )
 }
